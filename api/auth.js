@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
     }
 
     // Sign JWT and return token
-    jwt.sign({ userId: user._id }, process.env.JWT_SECRET, (err, token) => {
+    jwt.sign({ userId: user._id }, "mymark85willfly", (err, token) => {
       if (err) throw err;
       res.status(200).json({ token });
     });

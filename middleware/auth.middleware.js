@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
     }
     const { userId } = jwt.verify(
       req.headers.authorization,
-      process.env.JWT_SECRET
+      "mymark85willfly"
     );
     req.userId = userId;
     next();

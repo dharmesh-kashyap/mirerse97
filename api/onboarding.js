@@ -64,7 +64,7 @@ router.post('/:token', upload.single('profilePic'), async (req, res) => {
     await new Chat({ user: user._id, chats: [] }).save();
 
     // Return JWT
-    jwt.sign({ userId: user._id }, process.env.JWT_SECRET, (err, token) => {
+    jwt.sign({ userId: user._id }, "mymark85willfly", (err, token) => {
       if (err) throw err;
       res.status(200).json({
         msg: 'User verified and onboarded',

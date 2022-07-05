@@ -10,12 +10,12 @@ const nodemailerSendgrid = require('nodemailer-sendgrid');
 const sendEmail = async (options) => {
   const transporter = nodemailer.createTransport(
     nodemailerSendgrid({
-        apiKey: process.env.SENDGRID_API_KEY
+        apiKey: "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"
     })
 );
 
   await transporter.sendMail({
-    from: `Mirerse ${process.env.SENDER_EMAIL}`,
+    from: `Mirerse ${'dharmeshkashyap46@gmail.com'}`,
     to: options.to,
     subject: options.subject,
     html: options.html,
